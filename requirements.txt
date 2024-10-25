@@ -1,2 +1,4 @@
 streamlit
 pdfplumber
+google-generativeai
+icecream
