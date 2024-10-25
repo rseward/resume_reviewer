@@ -8,18 +8,22 @@ ollama document chat with a streamlit front end modified to talk with google gem
 
 """
 
+# Standard Library
 import os
-import time
-import google.generativeai as genai
 import streamlit as st
 import logging
 import tempfile
-import shutil
+from typing import List, Any
+
+# Project Deps
 import pdfplumber
-import icecream as ic
+import google.generativeai as genai
+
+# Project modules
+from gemini_rag import upload_pdf, wait_for_file_activation
 
 GEMINI_MODELS=[ "gemini-1.5-pro", "gemini-1.5-flash" ]
-from typing import List, Tuple, Dict, Any, Optional
+
 
 # Streamlit page configuration
 st.set_page_config(
@@ -62,7 +66,6 @@ def create_gemini_model(selected_model: str):
 
     return model
     
-from gemini_rag import upload_pdf, wait_for_file_activation
 
 def upload_file_action(file_upload):
     temp_dir = tempfile.mkdtemp()

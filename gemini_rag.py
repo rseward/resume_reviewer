@@ -1,3 +1,6 @@
+
+import time
+
 import google.generativeai as genai
 
 def upload_pdf(fname):

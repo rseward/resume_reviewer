@@ -2,3 +2,5 @@ streamlit
 pdfplumber
 google-generativeai
 icecream
+ruff
+
