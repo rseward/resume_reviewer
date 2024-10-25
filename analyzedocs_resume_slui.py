@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-ollama document chat with a streamlit front end modified to talk with gemini
+ollama document chat with a streamlit front end modified to talk with google gemini
 
 - https://www.youtube.com/watch?v=lig9c7OkxTI
 - https://www.youtube.com/watch?v=ztBJqzBU5kc

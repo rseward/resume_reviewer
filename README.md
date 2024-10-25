@@ -6,15 +6,18 @@ Simple AI project for reviewing a resume against a job description.
 
 This project was inspired by these youtube videos. Please watch them before you get started running this project.
 
+- https://www.youtube.com/watch?v=lig9c7OkxTI
+- https://www.youtube.com/watch?v=ztBJqzBU5kc
+
 ## How to use this
 
 The original program from the youtube video was setup to use ollama / llama3.2 local model using RAG. As this was
-a fair bit more complicated to setup and user. I opted to refactor the project idea to use Google Gemini model. If there
+a fair bit more complicated to setup and use. I opted to refactor the project idea to use Google Gemini model. If there
 is interest in the ollama / llama3.2 project I can create a project for that as well.
 
 These instructions assume a Linux like envioronment. It could be run in a pure Windows environment that supports python, but I will
-leave that as an exercise for the reader. If capture such platform specific instructions please share them and I will make sure they
-make it into this project.
+leave that as an exercise for the reader. If you capture such platform specific instructions please share them and I will make sure they
+added to this document.
 
 One alternative to using this on Windows would be to run it inside a ubuntu WSL environment.
 
@@ -45,9 +48,9 @@ export GOOGLE_API_KEY=BLAHyourreallylong_googleapikey
 
 ### Step 3
 
-The project focuses on PDF documents as those are easy to distribute to hiring managers and AI RAG processors.
+The project focuses on PDF documents as those are easy to distribute to hiring managers and AI RAG processors alike.
 
-The project makefile will "staple" your resume to your cover letter. The combined document is called application.pdf and
+The project Makefile will "staple" your resume to your cover letter. The combined document is called application.pdf and
 can be uploaded to the streamlit UI that the project presents.
 
 So once you have prepared your resume and cover letter. Export them as PDFS. Edit the Makefile to prepare an appropriate
@@ -101,7 +104,7 @@ Click the send button. Gemini should spend ten seconds or so evaluating the requ
 candidacy for the position.
 
 You can ask it more questions about your document. The AI is quite general and not specific for this task what's so ever. It will read
-and response as appropriate to the combination of the PDF document given, the job description text area and the chat message history.
+and respond as appropriate to the combination of the PDF document given, the job description text area and the chat message history.
 
 You could use this interface to interograte the latet version of D&D rules if you have a PDF of the rules. And then start asking questions
 of the documents.
@@ -118,7 +121,9 @@ Return to `UI Step 1` and you should be able to do it all again if you like.
 
 I personally have found this prompt useful for using this model / app:
 
+```
 Please summarize the strengths and weaknesses of the candidate for this position.
+```
 
 You can cut and paste that sentence into the chat prompt entry in the UI or write your own.
 
