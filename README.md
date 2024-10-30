@@ -42,7 +42,7 @@ Save your API key to a safe and secure spot. I save mine to a file called `myenv
 For example myenv file looks something like this:
 
 ```
-. .env
+. .env/bin/activate # Activate the project virtual environment
 export GOOGLE_API_KEY=BLAHyourreallylong_googleapikey
 ```
 
@@ -60,7 +60,7 @@ application.pdf
 make application.pdf
 ```
 
-This will "staple" the documents together and give you a chance to look the document over before using the UI.
+This will "staple" the documents together and it will give you a chance to look the cover letter / resume document over before using the UI.
 
 ### Step 4
 
@@ -70,7 +70,10 @@ Start the python project and it's streamlit UI.
 make runui
 ```
 
-This should start the web app and a browser window pointed to the interface.
+This should start the web app and a browser window pointed to the interface running on the local machine. Please note the current project runs locally
+but uses Google Gemini for generating a response. Ergo your document will be sent to Gemini to produce a response. If this is unacceptable, the original
+inspiration for this project is based on ollama and local models. Personally that implementation is a far bit more complicated and the results it
+produces is a little less cogent in my opinion.
 
 ### Step 5
 
@@ -107,7 +110,7 @@ You can ask it more questions about your document. The AI is quite general and n
 and respond as appropriate to the combination of the PDF document given, the job description text area and the chat message history.
 
 You could use this interface to interograte the latet version of D&D rules if you have a PDF of the rules. And then start asking questions
-of the documents.
+about the game rules in the text.
 
 ### UI Step 4
 
@@ -125,7 +128,7 @@ I personally have found this prompt useful for using this model / app:
 Please summarize the strengths and weaknesses of the candidate for this position.
 ```
 
-You can cut and paste that sentence into the chat prompt entry in the UI or write your own.
+You can cut and paste that sentence into the chat prompt entry in the UI or write your question.
 
 
 
