@@ -89,11 +89,11 @@ Return to the browser window with the UI.
 
 Click the Browse files button to upload the application.pdf document you created earlier.
 
-### UI Step 2
+#### UI Step 2
 
 In the job description text area, paste the job posting description.
 
-### UI Step 3
+#### UI Step 3
 
 In the chat area at the bottom of the right side. Find the "Enter a prompt here" chat text field.
 
@@ -112,7 +112,7 @@ and respond as appropriate to the combination of the PDF document given, the job
 You could use this interface to interograte the latet version of D&D rules if you have a PDF of the rules. And then start asking questions
 about the game rules in the text.
 
-### UI Step 4
+#### UI Step 4
 
 If you would like to repeat the process for another iteration or position. Click on the "Delete Session"
 
