@@ -4,12 +4,15 @@ Simple AI project for reviewing a resume against a job description.
 
 ## Credits
 
-This project was inspired by these youtube videos. Please watch them before you get started running this project.
+This project was inspired by these youtube videos. Please watch them before you get started running this project. Tony Kipkemboi
+in particular does a fantastic job of explaining how to create a streamlit ui that connects to an ollama LLM that runs locally. I took his work
+and discovered the local ollama models I used including Gemma didn't generate quite as good of responses as Gemini. So I
+refactored the project to connect to Google's Gemini Pro.
 
 - https://www.youtube.com/watch?v=lig9c7OkxTI
 - https://www.youtube.com/watch?v=ztBJqzBU5kc
 
-## How to use this
+## How to use this project
 
 The original program from the youtube video was setup to use ollama / llama3.2 local model using RAG. As this was
 a fair bit more complicated to setup and use. I opted to refactor the project idea to use Google Gemini model. If there
