@@ -22,7 +22,8 @@ import google.generativeai as genai
 # Project modules
 from gemini_rag import upload_pdf, wait_for_file_activation
 
-GEMINI_MODELS=[ "gemini-1.5-pro", "gemini-1.5-flash" ]
+#GEMINI_MODELS=[ "gemini-1.5-pro", "gemini-1.5-flash" ]
+GEMINI_MODELS=[ "models/gemini-2.5-flash-preview-05-20" ]
 
 
 # Streamlit page configuration
@@ -56,6 +57,10 @@ def create_gemini_model(selected_model: str):
         "max_output_tokens": 8192,
         "response_mime_type": "text/plain"
         }
+
+    print("Available gemini modules")
+    for m in genai.list_models():
+        print(f"{m.name} - {m.description}")
 
     logger.info( f"Creating Model: {selected_model}")
     model = genai.GenerativeModel(
@@ -278,7 +283,8 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    
+
+# #Prompts
 # Please summarize the strengths and weaknesses of the candidate for this position.
 # Analyze the sentiment of the cover letter portion of the candidates submission.
 
