@@ -6,10 +6,16 @@ ollama document chat with a streamlit front end modified to talk with google gem
 - https://www.youtube.com/watch?v=lig9c7OkxTI
 - https://www.youtube.com/watch?v=ztBJqzBU5kc
 
+Sentence I use for evaluating an application:
+
+  Please summarize the strengths and weaknesses of the candidate for this position.
+
 """
 
 # Standard Library
 import os
+assert os.getenv( "GOOGLE_API_KEY" ) is not None, "This application requires a GOOGLE_API_KEY to connect to the Google Gemini API. Please set or obtain to use this tool."
+
 import streamlit as st
 import logging
 import tempfile
@@ -53,7 +59,7 @@ def create_gemini_model(selected_model: str):
     model_gen_config = {
         "temperature": 1, # lower this value if we only want retrieval from the source data and no added inferences.
         "top_p": 0.95,
-        "top_k": 64,
+        "top_k": 40,
         "max_output_tokens": 8192,
         "response_mime_type": "text/plain"
         }
